@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="067fb99a-ee3a-478a-9a79-2fa7c9a94e1d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sr/grpc/server/CurrencyServer$1.class" afterPath="$PROJECT_DIR$/target/classes/sr/grpc/server/CurrencyServer$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sr/grpc/server/CurrencyServer.class" afterPath="$PROJECT_DIR$/target/classes/sr/grpc/server/CurrencyServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sr/grpc/client/Bank$1.class" afterPath="$PROJECT_DIR$/target/classes/sr/grpc/client/Bank$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sr/grpc/client/Bank.class" afterPath="$PROJECT_DIR$/target/classes/sr/grpc/client/Bank.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/slice/bankClient.ice" afterPath="$PROJECT_DIR$/slice/bankClient.ice" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sr/grpc/client/Bank.java" afterPath="$PROJECT_DIR$/src/main/java/sr/grpc/client/Bank.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sr/grpc/client/util/AccountFactoryI.java" afterPath="$PROJECT_DIR$/src/main/java/sr/grpc/client/util/AccountFactoryI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sr/grpc/client/util/AccountI.java" afterPath="$PROJECT_DIR$/src/main/java/sr/grpc/client/util/AccountI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sr/grpc/client/util/PremiumAccountI.java" afterPath="$PROJECT_DIR$/src/main/java/sr/grpc/client/util/PremiumAccountI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -64,8 +60,8 @@
       <file leaf-file-name="PremiumAccountI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/sr/grpc/client/util/PremiumAccountI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="17" column="109" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="109" />
+            <state relative-caret-position="102">
+              <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,8 +82,8 @@
       <file leaf-file-name="AccountFactoryI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sr/grpc/client/util/AccountFactoryI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="24" column="79" lean-forward="false" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
+            <state relative-caret-position="253">
+              <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1106,7 +1102,7 @@
       <updated>1525377904039</updated>
       <workItem from="1525377916676" duration="13092000" />
       <workItem from="1525432488903" duration="1318000" />
-      <workItem from="1525435748766" duration="17314000" />
+      <workItem from="1525435748766" duration="18075000" />
     </task>
     <task id="LOCAL-00001" summary="grpc works">
       <created>1525428126277</created>
@@ -1122,14 +1118,22 @@
       <option name="project" value="LOCAL" />
       <updated>1525458740251</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="credit added">
+      <created>1525462866805</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1525462866805</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31724000" />
+    <option name="totallyTimeSpent" value="32485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1146,7 +1150,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25642672" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25642672" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1171,7 +1175,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="grpc works" />
     <MESSAGE value="grpc part done. bank server almost works" />
-    <option name="LAST_COMMIT_MESSAGE" value="grpc part done. bank server almost works" />
+    <MESSAGE value="credit added" />
+    <option name="LAST_COMMIT_MESSAGE" value="credit added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1664,8 +1669,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sr/grpc/client/util/AccountFactoryI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="24" column="79" lean-forward="false" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
+        <state relative-caret-position="253">
+          <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1674,8 +1679,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sr/grpc/client/util/PremiumAccountI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="17" column="109" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="109" />
+        <state relative-caret-position="102">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
