@@ -1,7 +1,6 @@
 package sr.grpc.client;
 
 
-import BankClient.AccountFactory;
 import com.zeroc.Ice.Communicator;
 import com.zeroc.Ice.Identity;
 import com.zeroc.Ice.ObjectAdapter;
@@ -71,14 +70,7 @@ public class Bank {
                 communicator = Util.initialize();
                 ObjectAdapter adapter = communicator.createObjectAdapterWithEndpoints("Adapter1", "tcp -h localhost -p 10000:udp -h localhost -p 10000");
 
-                // 3. Stworzenie serwanta/serwant�w
-//                CalcI calcServant1 = new CalcI();
-//                CalcI calcServant2 = new CalcI();
-//
-//                // 4. Dodanie wpis�w do tablicy ASM
-//                adapter.add(calcServant1, new Identity("calc11", "calc"));
-//                adapter.add(calcServant2, new Identity("calc22", "calc"));
-                AccountFactoryI accountFactoryI = new AccountFactoryI(adapter);
+                AccountFactoryI accountFactoryI = new AccountFactoryI(adapter,currencyRateMap);
 
                 adapter.add(accountFactoryI,new Identity("calc11","calc"));
 

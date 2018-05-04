@@ -7,13 +7,6 @@ module BankClient
   enum AccountType { STANDARD , PREMIUM};
   enum CurrencyType {USD = 0,EUR = 1,PLN = 2,CHF = 3};
 
-//  class ClientInfo
-//  {
-//    string firstName;
-//    string lastName;
-//    string id;
-//    AccountType type;
-//  };
   class CreditInfo
   {
   CurrencyType baseCurrency;
@@ -41,7 +34,7 @@ module BankClient
 
   interface Account
   {
-  double accountBalance(string uid);
+  double accountBalance();
   void deposit(double value);
   };
 

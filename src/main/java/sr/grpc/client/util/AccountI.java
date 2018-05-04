@@ -16,7 +16,7 @@ public class AccountI implements Account{
         this.balance =0;
     }
 
-    public double accountBalance(String uid, Current current) {
+    public double accountBalance(Current current) {
         return balance;
     }
 
