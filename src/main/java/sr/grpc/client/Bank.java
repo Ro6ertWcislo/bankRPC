@@ -21,7 +21,8 @@ public class Bank {
     private final CurrencyProviderGrpc.CurrencyProviderStub currencyProviderStub;
     private final CurrencyProviderGrpc.CurrencyProviderBlockingStub currencyProviderBlockingStub;
 
-    private HashMap<CurrencyType,Double> currencyRateMap = new HashMap<>();
+    private final HashMap<CurrencyType,Double> currencyRateMap = new HashMap<>();
+    private StreamObserver<Currency> requestObserver;
 
 
     /**
@@ -37,7 +38,8 @@ public class Bank {
         currencyProviderBlockingStub = CurrencyProviderGrpc.newBlockingStub(channel);
         currencyProviderStub = CurrencyProviderGrpc.newStub(channel);
         currencyRateMap.put(CurrencyType.USD,1.0);
-        currencyRateMap.put(CurrencyType.EUR,1.0);
+        currencyRateMap.put(CurrencyType.CHF,1.0);
+
 
     }
 
@@ -47,10 +49,12 @@ public class Bank {
     }
     private void printRates(){
         currencyRateMap.entrySet().forEach(System.out::println);
+        System.out.println("==================");
     }
 
     private void start() throws InterruptedException {
         try {
+            getExchangeRates();
             String line = null;
             java.io.BufferedReader in = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));
             do {
@@ -62,7 +66,6 @@ public class Bank {
                         break;
                     }
                     if (line.equals("add")) {
-                        printRates();
                         getExchangeRates();
                     }
                 } catch (java.io.IOException ex) {
@@ -71,6 +74,8 @@ public class Bank {
             }
             while (!line.equals("x"));
         } finally {
+            // Mark the end of requests
+            requestObserver.onCompleted();
             shutdown();
         }
     }
@@ -89,17 +94,16 @@ public class Bank {
 
             @Override
             public void onError(Throwable t) {
-                System.out.println("lipa");
+                t.printStackTrace();
             }
 
             @Override
             public void onCompleted() {
                 System.out.println("przeslane wszystko");
-                printRates();
             }
         };
 
-        StreamObserver<Currency> requestObserver =currencyProviderStub.getExchangeRates(responseObserver);
+        requestObserver =currencyProviderStub.getExchangeRates(responseObserver);
         try{
             currencyRateMap.keySet().stream()
                     .map(currencyType -> Currency.newBuilder()
@@ -111,8 +115,6 @@ public class Bank {
             requestObserver.onError(e);
             throw e;
         }
-        // Mark the end of requests
-        requestObserver.onCompleted();
 
 
     }
