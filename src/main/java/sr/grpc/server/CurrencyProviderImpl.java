@@ -15,7 +15,7 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
 public class CurrencyProviderImpl extends CurrencyProviderGrpc.CurrencyProviderImplBase {
-    private static long period = 2;
+    private static long period = 20;
     private HashMap<CurrencyType,Double> currencyMap = new HashMap<>();
     private HashMap<StreamObserver<ExchangeRate>,List<CurrencyType>> bankCurrenciesMap = new HashMap<>();
 

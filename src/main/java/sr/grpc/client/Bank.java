@@ -1,15 +1,22 @@
 package sr.grpc.client;
 
 
+import BankClient.AccountFactory;
+import com.zeroc.Ice.Communicator;
+import com.zeroc.Ice.Identity;
+import com.zeroc.Ice.ObjectAdapter;
+import com.zeroc.Ice.Util;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
+import sr.grpc.client.util.AccountFactoryI;
 import sr.grpc.gen.Currency;
 import sr.grpc.gen.CurrencyProviderGrpc;
 import sr.grpc.gen.CurrencyType;
 import sr.grpc.gen.ExchangeRate;
 
 import java.util.HashMap;
+import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
@@ -41,6 +48,7 @@ public class Bank {
         currencyRateMap.put(CurrencyType.CHF,1.0);
 
 
+
     }
 
     public static void main(String[] args) throws Exception {
@@ -55,24 +63,52 @@ public class Bank {
     private void start() throws InterruptedException {
         try {
             getExchangeRates();
-            String line = null;
-            java.io.BufferedReader in = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));
-            do {
-                try {
-                    System.out.print("==> ");
-                    System.out.flush();
-                    line = in.readLine();
-                    if (line == null) {
-                        break;
-                    }
-                    if (line.equals("add")) {
-                        getExchangeRates();
-                    }
-                } catch (java.io.IOException ex) {
-                    System.err.println(ex);
+            int status = 0;
+            Communicator communicator = null;
+
+            try
+            {
+                communicator = Util.initialize();
+                ObjectAdapter adapter = communicator.createObjectAdapterWithEndpoints("Adapter1", "tcp -h localhost -p 10000:udp -h localhost -p 10000");
+
+                // 3. Stworzenie serwanta/serwant�w
+//                CalcI calcServant1 = new CalcI();
+//                CalcI calcServant2 = new CalcI();
+//
+//                // 4. Dodanie wpis�w do tablicy ASM
+//                adapter.add(calcServant1, new Identity("calc11", "calc"));
+//                adapter.add(calcServant2, new Identity("calc22", "calc"));
+                AccountFactoryI accountFactoryI = new AccountFactoryI(adapter);
+
+                adapter.add(accountFactoryI,new Identity("calc11","calc"));
+
+                adapter.activate();
+
+                System.out.println("Entering event processing loop...");
+
+                communicator.waitForShutdown();
+
+            }
+            catch (Exception e)
+            {
+                System.err.println(e);
+                status = 1;
+            }
+            if (communicator != null)
+            {
+                // Clean up
+                //
+                try
+                {
+                    communicator.destroy();
+                }
+                catch (Exception e)
+                {
+                    System.err.println(e);
+                    status = 1;
                 }
             }
-            while (!line.equals("x"));
+            System.exit(status);
         } finally {
             // Mark the end of requests
             requestObserver.onCompleted();
