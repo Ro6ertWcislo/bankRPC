@@ -14,9 +14,11 @@ import sr.rpc.gen.CurrencyProviderGrpc;
 import sr.rpc.gen.CurrencyType;
 import sr.rpc.gen.ExchangeRate;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
+import java.util.stream.Stream;
 
 public class Bank {
     private static final Logger logger = Logger.getLogger(Bank.class.getName());
@@ -24,10 +26,10 @@ public class Bank {
     private final ManagedChannel channel;
 
     private final CurrencyProviderGrpc.CurrencyProviderStub currencyProviderStub;
-    private final CurrencyProviderGrpc.CurrencyProviderBlockingStub currencyProviderBlockingStub;
 
-    private final HashMap<CurrencyType,Double> currencyRateMap = new HashMap<>();
+    private final HashMap<CurrencyType, Double> currencyRateMap = new HashMap<>();
     private StreamObserver<Currency> requestObserver;
+    private String bankName;
 
 
     /**
@@ -39,62 +41,65 @@ public class Bank {
                 .usePlaintext(true)
                 .build();
 
-
-        currencyProviderBlockingStub = CurrencyProviderGrpc.newBlockingStub(channel);
         currencyProviderStub = CurrencyProviderGrpc.newStub(channel);
-        currencyRateMap.put(CurrencyType.USD,1.0);
-        currencyRateMap.put(CurrencyType.CHF,1.0);
-
-
-
     }
 
     public static void main(String[] args) throws Exception {
         Bank client = new Bank("localhost", 50051);
         client.start();
     }
-    private void printRates(){
+
+    private void printRates() {
         currencyRateMap.entrySet().forEach(System.out::println);
         System.out.println("==================");
     }
 
     private void start() throws InterruptedException {
         try {
-            getExchangeRates();
+
             int status = 0;
             Communicator communicator = null;
+            java.io.BufferedReader in = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));
+            try {
+                System.out.println("type bank name");
+                bankName = in.readLine();
+                System.out.println("type currencies devided by spaces, for example: USD PLN CHF");
+                Stream.of(in.readLine().split(" "))
+                        .forEach(currency -> currencyRateMap.put(CurrencyType.valueOf(currency), 1.0));
+            } catch (IOException e) {
+                System.out.print("something went wrong with reading from console. Try again later");
+                System.exit(1);
+            } catch (Exception ex) {
+                System.out.print("something went wrong. Try again later");
+                System.exit(1);
+            }
+            getExchangeRates();
+            try {
 
-            try
-            {
+
                 communicator = Util.initialize();
                 ObjectAdapter adapter = communicator.createObjectAdapterWithEndpoints("Adapter1", "tcp -h localhost -p 10000:udp -h localhost -p 10000");
 
-                AccountFactoryI accountFactoryI = new AccountFactoryI(adapter,currencyRateMap);
+                AccountFactoryI accountFactoryI = new AccountFactoryI(adapter, currencyRateMap);
 
-                adapter.add(accountFactoryI,new Identity("calc11","calc"));
+                adapter.add(accountFactoryI, new Identity(bankName, "bank"));
 
                 adapter.activate();
 
                 System.out.println("Entering event processing loop...");
 
                 communicator.waitForShutdown();
+                System.out.println("Entering event processing loop...");
 
-            }
-            catch (Exception e)
-            {
+            } catch (Exception e) {
                 System.err.println(e);
                 status = 1;
             }
-            if (communicator != null)
-            {
-                // Clean up
-                //
-                try
-                {
+            if (communicator != null) {
+
+                try {
                     communicator.destroy();
-                }
-                catch (Exception e)
-                {
+                } catch (Exception e) {
                     System.err.println(e);
                     status = 1;
                 }
@@ -115,7 +120,7 @@ public class Bank {
         StreamObserver<ExchangeRate> responseObserver = new StreamObserver<ExchangeRate>() {
             @Override
             public void onNext(ExchangeRate exchangeRate) {
-                currencyRateMap.put(exchangeRate.getCurrency(),exchangeRate.getRate());
+                currencyRateMap.put(exchangeRate.getCurrency(), exchangeRate.getRate());
                 printRates();
             }
 
@@ -130,8 +135,8 @@ public class Bank {
             }
         };
 
-        requestObserver =currencyProviderStub.getExchangeRates(responseObserver);
-        try{
+        requestObserver = currencyProviderStub.getExchangeRates(responseObserver);
+        try {
             currencyRateMap.keySet().stream()
                     .map(currencyType -> Currency.newBuilder()
                             .setCurrency(currencyType)

@@ -12,8 +12,7 @@ public class CurrencyServer {
     private int port = 50051;
     private Server server;
 
-    private void start() throws IOException
-    {
+    private void start() throws IOException {
         server = ServerBuilder.forPort(port)
                 .addService(new CurrencyProviderImpl())
                 .build()

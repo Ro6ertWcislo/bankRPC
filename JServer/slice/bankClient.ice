@@ -22,10 +22,6 @@ module BankClient
     short year;
    };
 
-  exception NotAuthrorizedException{
-  string reason;
-  };
-  exception NoIncomeException{};
   exception DateRangeError{
   string reason;
   };
@@ -40,11 +36,11 @@ module BankClient
 
   interface PremiumAccount extends Account
   {
-        CreditInfo applyForCredit(double value, CurrencyType currency, Date from, Date to ) throws NotAuthrorizedException,DateRangeError;
+        CreditInfo applyForCredit(double value, CurrencyType currency, Date from, Date to ) throws DateRangeError;
   };
   interface AccountFactory
     {
-    Account* create(string firstName, string lastName, string pesel, double income) throws NoIncomeException;
+    Account* create(string firstName, string lastName, string pesel, double income) ;
     };
 
 

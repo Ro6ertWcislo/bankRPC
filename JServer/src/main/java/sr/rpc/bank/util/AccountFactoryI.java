@@ -11,19 +11,21 @@ import sr.rpc.gen.CurrencyType;
 
 import java.util.HashMap;
 
-public class AccountFactoryI implements AccountFactory{
+public class AccountFactoryI implements AccountFactory {
     private ObjectAdapter adapter;
-    private  HashMap<CurrencyType,Double> currencyRateMap;
-    public AccountFactoryI(ObjectAdapter adapter, HashMap<CurrencyType,Double> currencyRateMap) {
+    private HashMap<CurrencyType, Double> currencyRateMap;
+    private int minPremiumIncome = 5000;
+
+    public AccountFactoryI(ObjectAdapter adapter, HashMap<CurrencyType, Double> currencyRateMap) {
         this.adapter = adapter;
-        this.currencyRateMap =currencyRateMap;
+        this.currencyRateMap = currencyRateMap;
     }
 
     @Override
-    public AccountPrx create(String firstName, String lastName, String pesel, double income, Current current) throws NoIncomeException {
-        if(income>5000)
-            return PremiumAccountPrx.uncheckedCast(adapter.add(new PremiumAccountI(firstName,lastName,pesel,income,currencyRateMap), new Identity(pesel,"account")));
+    public AccountPrx create(String firstName, String lastName, String pesel, double income, Current current) {
+        if (income > minPremiumIncome)
+            return PremiumAccountPrx.uncheckedCast(adapter.add(new PremiumAccountI(firstName, lastName, pesel, income, currencyRateMap), new Identity(pesel, "account")));
         else
-            return AccountPrx.uncheckedCast(adapter.add(new AccountI(firstName,lastName,pesel,income), new Identity(pesel,"account")));
+            return AccountPrx.uncheckedCast(adapter.add(new AccountI(firstName, lastName, pesel, income), new Identity(pesel, "account")));
     }
 }
