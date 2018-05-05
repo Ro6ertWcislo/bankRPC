@@ -13,7 +13,8 @@ currencies = {
 
 with Ice.initialize(sys.argv) as communicator:
     bankName = input("type your bank name")
-    base = communicator.stringToProxy("bank/{}:tcp -h localhost -p 10000:udp -h localhost -p 10000".format(bankName))
+    port = input("type bank port")
+    base = communicator.stringToProxy("bank/{}:tcp -h localhost -p {}:udp -h localhost -p {}".format(bankName,port,port))
     factory = BankClient.AccountFactoryPrx.checkedCast(base)
     if not factory:
         raise RuntimeError("Invalid proxy")
@@ -26,7 +27,7 @@ with Ice.initialize(sys.argv) as communicator:
         account = factory.create(f, l, p, i)
     else:
         pesel = input("gimmie you pesel")
-        obj = communicator.stringToProxy("account/" + pesel + ":tcp -h localhost -p 10000:udp -h localhost -p 10000")
+        obj = communicator.stringToProxy("account/" + pesel + ":tcp -h localhost -p "+port+":udp -h localhost -p "+port)
         account = BankClient.AccountPrx.checkedCast(obj)
 
     while c_input != 'end':

@@ -24,6 +24,7 @@ public class Bank {
     private static final Logger logger = Logger.getLogger(Bank.class.getName());
 
     private final ManagedChannel channel;
+    private final int bankPort = 10002;
 
     private final CurrencyProviderGrpc.CurrencyProviderStub currencyProviderStub;
 
@@ -78,7 +79,7 @@ public class Bank {
 
 
                 communicator = Util.initialize();
-                ObjectAdapter adapter = communicator.createObjectAdapterWithEndpoints("Adapter1", "tcp -h localhost -p 10000:udp -h localhost -p 10000");
+                ObjectAdapter adapter = communicator.createObjectAdapterWithEndpoints("Adapter1", "tcp -h localhost -p "+bankPort+":udp -h localhost -p "+bankPort);
 
                 AccountFactoryI accountFactoryI = new AccountFactoryI(adapter, currencyRateMap);
 
