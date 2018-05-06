@@ -5,9 +5,12 @@ import BankClient.CurrencyType;
 import com.zeroc.Ice.Current;
 
 import java.util.HashMap;
+import java.util.logging.Logger;
 
 public class PremiumAccountI extends AccountI implements PremiumAccount {
     private HashMap<sr.rpc.gen.CurrencyType, Double> currencyRateMap;
+    private static final Logger logger = Logger.getLogger(PremiumAccountI.class.getName());
+
 
     public PremiumAccountI(String firstName, String lastName, String pesel, double income, HashMap<sr.rpc.gen.CurrencyType, Double> currencyRateMap) {
         super(firstName, lastName, pesel, income);
@@ -16,9 +19,11 @@ public class PremiumAccountI extends AccountI implements PremiumAccount {
 
     @Override
     public CreditInfo applyForCredit(double value, CurrencyType currency, Date from, Date to, Current current) throws DateRangeError {
-        if(from.year>to.year || (from.year==to.year && from.month>to.month) ||(from.year==to.year && from.month==to.month && from.day > to.day))
+
+        if (from.year > to.year || (from.year == to.year && from.month > to.month) || (from.year == to.year && from.month == to.month && from.day > to.day))
             throw new DateRangeError("'from' date is after 'to' date");
         value *= 1.3;
+        logger.info("creating credit for" + current.id + "on " + value + " " + currency);
         return new CreditInfo(CurrencyType.PLN, countForeignValue(value, currency), currency, value);
     }
 

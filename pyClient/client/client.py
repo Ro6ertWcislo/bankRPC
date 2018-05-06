@@ -14,7 +14,7 @@ currencies = {
 with Ice.initialize(sys.argv) as communicator:
     bankName = input("type your bank name")
     port = input("type bank port")
-    base = communicator.stringToProxy("bank/{}:tcp -h localhost -p {}:udp -h localhost -p {}".format(bankName,port,port))
+    base = communicator.stringToProxy("bank/{0}:tcp -h localhost -p {1}:udp -h localhost -p {1}".format(bankName,port))
     factory = BankClient.AccountFactoryPrx.checkedCast(base)
     if not factory:
         raise RuntimeError("Invalid proxy")

@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="067fb99a-ee3a-478a-9a79-2fa7c9a94e1d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sr/rpc/bank/dupa.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sr/rpc/bank/Bank.class" afterPath="$PROJECT_DIR$/target/classes/sr/rpc/bank/Bank.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sr/rpc/bank/util/AccountFactoryI.class" afterPath="$PROJECT_DIR$/target/classes/sr/rpc/bank/util/AccountFactoryI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sr/rpc/bank/util/PremiumAccountI.class" afterPath="$PROJECT_DIR$/target/classes/sr/rpc/bank/util/PremiumAccountI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sr/rpc/bank/Bank.java" afterPath="$PROJECT_DIR$/src/main/java/sr/rpc/bank/Bank.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/AccountFactoryI.java" afterPath="$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/AccountFactoryI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/AccountI.java" afterPath="$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/AccountI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/PremiumAccountI.java" afterPath="$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/PremiumAccountI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sr/rpc/currency/CurrencyProviderImpl.java" afterPath="$PROJECT_DIR$/src/main/java/sr/rpc/currency/CurrencyProviderImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../pyClient/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../pyClient/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../pyClient/client/client.py" afterPath="$PROJECT_DIR$/../pyClient/client/client.py" />
     </list>
@@ -38,8 +39,8 @@
       <file leaf-file-name="Bank.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/bank/Bank.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+            <state relative-caret-position="169">
+              <caret line="55" column="51" lean-forward="false" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,11 +48,34 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CurrencyServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/currency/CurrencyServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="e#626#1016#0" expanded="true" />
+                <element signature="e#1015#1016#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CurrencyProviderImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/currency/CurrencyProviderImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="18" column="70" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="bankClient.ice" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/slice/bankClient.ice">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+            <state relative-caret-position="395">
+              <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -60,8 +84,8 @@
       <file leaf-file-name="AccountFactoryI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/AccountFactoryI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            <state relative-caret-position="236">
+              <caret line="15" column="73" lean-forward="false" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,12 +96,10 @@
       <file leaf-file-name="AccountI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/AccountI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="34" />
+            <state relative-caret-position="136">
+              <caret line="8" column="76" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#509#510#0" expanded="true" />
-                <element signature="e#539#540#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,8 +108,8 @@
       <file leaf-file-name="PremiumAccountI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/PremiumAccountI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            <state relative-caret-position="374">
+              <caret line="25" column="62" lean-forward="false" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,12 +163,12 @@
         <option value="$PROJECT_DIR$/src/main/java/sr/rpc/client/util/PremiumAccountI.java" />
         <option value="$PROJECT_DIR$/currency.proto" />
         <option value="$PROJECT_DIR$/src/main/java/sr/rpc/bank/dupa.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sr/rpc/currency/CurrencyProviderImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/sr/rpc/currency/CurrencyServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/AccountI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sr/rpc/currency/CurrencyProviderImpl.java" />
         <option value="$PROJECT_DIR$/slice/bankClient.ice" />
-        <option value="$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/PremiumAccountI.java" />
         <option value="$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/AccountFactoryI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/PremiumAccountI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/AccountI.java" />
         <option value="$PROJECT_DIR$/src/main/java/sr/rpc/bank/Bank.java" />
       </list>
     </option>
@@ -188,6 +210,7 @@
     <panes>
       <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -259,6 +282,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="rpc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="currency" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -342,13 +369,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../gRPC2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -958,7 +984,8 @@
       <workItem from="1525377916676" duration="13092000" />
       <workItem from="1525432488903" duration="1318000" />
       <workItem from="1525435748766" duration="18504000" />
-      <workItem from="1525464184876" duration="16273000" />
+      <workItem from="1525464184876" duration="18682000" />
+      <workItem from="1525596013655" duration="4032000" />
     </task>
     <task id="LOCAL-00001" summary="grpc works">
       <created>1525428126277</created>
@@ -992,7 +1019,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49187000" />
+    <option name="totallyTimeSpent" value="55628000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1015,26 +1042,26 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31897712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.487214" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2596401" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26285347" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3835801" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3835801" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1058,24 +1085,24 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/sr/rpc/bank/Bank.java</url>
-          <line>138</line>
+          <line>140</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/sr/rpc/bank/Bank.java</url>
-          <line>123</line>
+          <line>125</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/sr/rpc/currency/CurrencyProviderImpl.java</url>
-          <line>49</line>
+          <line>54</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/sr/rpc/bank/Bank.java</url>
-          <line>81</line>
+          <line>83</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
@@ -1099,21 +1126,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/bank/dupa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="59" column="74" lean-forward="false" selection-start-line="59" selection-start-column="74" selection-end-line="59" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/bank/dupa.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/currency/CurrencyServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="17" column="55" lean-forward="false" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
           <folding>
-            <element signature="e#626#1016#0" expanded="false" />
-            <element signature="e#1015#1016#0" expanded="false" />
+            <element signature="e#626#1016#0" expanded="true" />
+            <element signature="e#1015#1016#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1122,9 +1142,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-          <folding>
-            <element signature="e#2979#2980#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1132,50 +1150,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#14340#0" expanded="false" />
-            <element signature="e#619#620#0" expanded="false" />
-            <element signature="e#699#700#0" expanded="false" />
-            <element signature="e#1815#1816#0" expanded="false" />
-            <element signature="e#1888#1889#0" expanded="false" />
-            <element signature="e#6620#6621#0" expanded="false" />
-            <element signature="e#6683#6684#0" expanded="false" />
-            <element signature="e#7773#7774#0" expanded="false" />
-            <element signature="e#7842#7843#0" expanded="false" />
-            <element signature="e#8201#8202#0" expanded="false" />
-            <element signature="e#8267#8268#0" expanded="false" />
-            <element signature="e#9149#9150#0" expanded="false" />
-            <element signature="e#9198#9199#0" expanded="false" />
-            <element signature="e#10166#10167#0" expanded="false" />
-            <element signature="e#10221#10222#0" expanded="false" />
-            <element signature="e#10505#10506#0" expanded="false" />
-            <element signature="e#10559#10560#0" expanded="false" />
-            <element signature="e#10850#10851#0" expanded="false" />
-            <element signature="e#10906#10907#0" expanded="false" />
-            <element signature="e#11279#11280#0" expanded="false" />
-            <element signature="e#11342#11343#0" expanded="false" />
-            <element signature="e#11554#11555#0" expanded="false" />
-            <element signature="e#11602#11603#0" expanded="false" />
-            <element signature="e#11814#11815#0" expanded="false" />
-            <element signature="e#11862#11863#0" expanded="false" />
-            <element signature="e#12091#12092#0" expanded="false" />
-            <element signature="e#12144#12145#0" expanded="false" />
-            <element signature="e#12362#12363#0" expanded="false" />
-            <element signature="e#12412#12413#0" expanded="false" />
-            <element signature="e#12647#12648#0" expanded="false" />
-            <element signature="e#12702#12703#0" expanded="false" />
-            <element signature="e#13046#13047#0" expanded="false" />
-            <element signature="e#13098#13099#0" expanded="false" />
-            <element signature="e#13398#13399#0" expanded="false" />
-            <element signature="e#13448#13449#0" expanded="false" />
-            <element signature="e#13797#13798#0" expanded="false" />
-            <element signature="e#13863#13864#0" expanded="false" />
-            <element signature="e#14193#14194#0" expanded="false" />
-            <element signature="e#14250#14251#0" expanded="false" />
-            <element signature="e#14290#14291#0" expanded="false" />
-            <element signature="e#14336#14337#0" expanded="false" />
-            <marker date="1525459259242" expanded="true" signature="1602:1770" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1236,8 +1210,8 @@
         <state relative-caret-position="561">
           <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
           <folding>
-            <element signature="e#626#1016#0" expanded="false" />
-            <element signature="e#1015#1016#0" expanded="false" />
+            <element signature="e#626#1016#0" expanded="true" />
+            <element signature="e#1015#1016#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1246,9 +1220,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1326">
           <caret line="78" column="5" lean-forward="false" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
-          <folding>
-            <element signature="e#2979#2980#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1264,7 +1236,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1333,8 +1304,8 @@
         <state relative-caret-position="561">
           <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
           <folding>
-            <element signature="e#626#1016#0" expanded="false" />
-            <element signature="e#1015#1016#0" expanded="false" />
+            <element signature="e#626#1016#0" expanded="true" />
+            <element signature="e#1015#1016#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1351,7 +1322,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1369,9 +1339,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1326">
           <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
-          <folding>
-            <element signature="e#2979#2980#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1396,7 +1364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1448,7 +1415,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1463,50 +1429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#14340#0" expanded="false" />
-            <element signature="e#619#620#0" expanded="false" />
-            <element signature="e#699#700#0" expanded="false" />
-            <element signature="e#1815#1816#0" expanded="false" />
-            <element signature="e#1888#1889#0" expanded="false" />
-            <element signature="e#6620#6621#0" expanded="false" />
-            <element signature="e#6683#6684#0" expanded="false" />
-            <element signature="e#7773#7774#0" expanded="false" />
-            <element signature="e#7842#7843#0" expanded="false" />
-            <element signature="e#8201#8202#0" expanded="false" />
-            <element signature="e#8267#8268#0" expanded="false" />
-            <element signature="e#9149#9150#0" expanded="false" />
-            <element signature="e#9198#9199#0" expanded="false" />
-            <element signature="e#10166#10167#0" expanded="false" />
-            <element signature="e#10221#10222#0" expanded="false" />
-            <element signature="e#10505#10506#0" expanded="false" />
-            <element signature="e#10559#10560#0" expanded="false" />
-            <element signature="e#10850#10851#0" expanded="false" />
-            <element signature="e#10906#10907#0" expanded="false" />
-            <element signature="e#11279#11280#0" expanded="false" />
-            <element signature="e#11342#11343#0" expanded="false" />
-            <element signature="e#11554#11555#0" expanded="false" />
-            <element signature="e#11602#11603#0" expanded="false" />
-            <element signature="e#11814#11815#0" expanded="false" />
-            <element signature="e#11862#11863#0" expanded="false" />
-            <element signature="e#12091#12092#0" expanded="false" />
-            <element signature="e#12144#12145#0" expanded="false" />
-            <element signature="e#12362#12363#0" expanded="false" />
-            <element signature="e#12412#12413#0" expanded="false" />
-            <element signature="e#12647#12648#0" expanded="false" />
-            <element signature="e#12702#12703#0" expanded="false" />
-            <element signature="e#13046#13047#0" expanded="false" />
-            <element signature="e#13098#13099#0" expanded="false" />
-            <element signature="e#13398#13399#0" expanded="false" />
-            <element signature="e#13448#13449#0" expanded="false" />
-            <element signature="e#13797#13798#0" expanded="false" />
-            <element signature="e#13863#13864#0" expanded="false" />
-            <element signature="e#14193#14194#0" expanded="false" />
-            <element signature="e#14250#14251#0" expanded="false" />
-            <element signature="e#14290#14291#0" expanded="false" />
-            <element signature="e#14336#14337#0" expanded="false" />
-            <marker date="1525459259242" expanded="true" signature="1602:1770" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1514,7 +1436,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1542,55 +1463,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/currency/CurrencyProviderImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="76" column="42" lean-forward="false" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
-          <folding>
-            <element signature="e#2979#2980#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/currency/CurrencyServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-242">
-          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-          <folding>
-            <element signature="e#626#1016#0" expanded="false" />
-            <element signature="e#1015#1016#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gen/BankClient/PremiumAccount.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="670">
           <caret line="69" column="29" lean-forward="false" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/bank/dupa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="60" lean-forward="false" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/bank/dupa.java" />
     <entry file="file://$PROJECT_DIR$/slice/bankClient.ice">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+        <state relative-caret-position="395">
+          <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/currency/CurrencyProviderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="18" column="70" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/AccountFactoryI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="15" column="73" lean-forward="false" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/PremiumAccountI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="374">
+          <caret line="25" column="62" lean-forward="false" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1599,30 +1509,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/AccountI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="34" />
+        <state relative-caret-position="136">
+          <caret line="8" column="76" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#509#510#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/bank/util/AccountFactoryI.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/currency/CurrencyServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        <state relative-caret-position="63">
+          <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#626#1016#0" expanded="true" />
+            <element signature="e#1015#1016#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sr/rpc/bank/Bank.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        <state relative-caret-position="169">
+          <caret line="55" column="51" lean-forward="false" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

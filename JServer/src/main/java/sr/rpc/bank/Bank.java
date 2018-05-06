@@ -50,9 +50,11 @@ public class Bank {
         client.start();
     }
 
-    private void printRates() {
-        currencyRateMap.entrySet().forEach(System.out::println);
-        System.out.println("==================");
+    private void logUpdates() {
+
+        StringBuilder s = new StringBuilder();
+        currencyRateMap.entrySet().forEach(curr-> s.append("\n").append(curr));
+        logger.info("updated currencies:"+s);
     }
 
     private void start() throws InterruptedException {
@@ -86,11 +88,11 @@ public class Bank {
                 adapter.add(accountFactoryI, new Identity(bankName, "bank"));
 
                 adapter.activate();
+                logger.info(bankName+"server started. Listening on "+bankPort);
 
-                System.out.println("Entering event processing loop...");
+                logger.info("Entering event processing loop...");
 
                 communicator.waitForShutdown();
-                System.out.println("Entering event processing loop...");
 
             } catch (Exception e) {
                 System.err.println(e);
@@ -122,7 +124,7 @@ public class Bank {
             @Override
             public void onNext(ExchangeRate exchangeRate) {
                 currencyRateMap.put(exchangeRate.getCurrency(), exchangeRate.getRate());
-                printRates();
+                logUpdates();
             }
 
             @Override
@@ -132,7 +134,7 @@ public class Bank {
 
             @Override
             public void onCompleted() {
-                System.out.println("przeslane wszystko");
+                logger.info("done");
             }
         };
 

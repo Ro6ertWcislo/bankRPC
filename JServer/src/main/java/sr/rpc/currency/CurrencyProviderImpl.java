@@ -13,8 +13,11 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 public class CurrencyProviderImpl extends CurrencyProviderGrpc.CurrencyProviderImplBase {
+    private static final Logger logger = Logger.getLogger(CurrencyProviderImpl.class.getName());
+
     private static long period = 20;
     private HashMap<CurrencyType, Double> currencyMap = new HashMap<>();
     private HashMap<StreamObserver<ExchangeRate>, List<CurrencyType>> bankCurrenciesMap = new HashMap<>();
@@ -30,6 +33,7 @@ public class CurrencyProviderImpl extends CurrencyProviderGrpc.CurrencyProviderI
     }
 
     private void updateCurrencies() {
+        logger.info("updating currency ");
         currencyMap.keySet().forEach(this::updateExchangeRate);
     }
 
@@ -42,6 +46,7 @@ public class CurrencyProviderImpl extends CurrencyProviderGrpc.CurrencyProviderI
         BigDecimal bd = new BigDecimal(value);
         bd = bd.setScale(2, RoundingMode.HALF_UP);
         return bd.doubleValue();
+
     }
 
     @Override
@@ -53,6 +58,7 @@ public class CurrencyProviderImpl extends CurrencyProviderGrpc.CurrencyProviderI
             public void onNext(Currency currency) {
                 bankCurrenciesMap.get(responseObserver).add(currency.getCurrency());
                 singleCurrencyNotify(responseObserver, currency.getCurrency());
+                logger.info("received currency: "+ currency.getCurrency() +". Starting notifications");
             }
 
             @Override
