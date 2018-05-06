@@ -51,7 +51,6 @@ public class Bank {
     }
 
     private void logUpdates() {
-
         StringBuilder s = new StringBuilder();
         currencyRateMap.entrySet().forEach(curr-> s.append("\n").append(curr));
         logger.info("updated currencies:"+s);
@@ -83,7 +82,7 @@ public class Bank {
                 communicator = Util.initialize();
                 ObjectAdapter adapter = communicator.createObjectAdapterWithEndpoints("Adapter1", "tcp -h localhost -p "+bankPort+":udp -h localhost -p "+bankPort);
 
-                AccountFactoryI accountFactoryI = new AccountFactoryI(adapter, currencyRateMap);
+                AccountFactoryI accountFactoryI = new AccountFactoryI( currencyRateMap);
 
                 adapter.add(accountFactoryI, new Identity(bankName, "bank"));
 
